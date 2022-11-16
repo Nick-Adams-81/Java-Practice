@@ -1,5 +1,5 @@
 public class Person {
-    public static long worldPopulation = 7_500_000_000L;
+
     public String name;
     public int yearsPlayed;
 
@@ -10,6 +10,10 @@ public class Person {
 
     public String getPersonInfo() {
         return String.format("Name: %s, Years Played: %s", name, yearsPlayed);
+    }
+
+    public void sayHello() {
+        System.out.println("Hello from " + name);
     }
 }
 
