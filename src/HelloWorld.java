@@ -5,7 +5,7 @@ public class HelloWorld {
 
     public static void main(String[] args) {
 
-        Person theBestDrummer = new Person("thomas lang", 25);
+        Person theBestDrummer = new Person("thomas lang", 25, 40);
         System.out.println(theBestDrummer.getPersonInfo());
         theBestDrummer.sayHello();
         String hello = "Hello people!";
