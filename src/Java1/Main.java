@@ -1,4 +1,5 @@
 package Java1;
+import java.util.Scanner;
 
 public class Main {
 
@@ -47,6 +48,18 @@ public class Main {
         int y = 5;
         System.out.println(++y);
         System.out.println(y);
+
+
+        String name = "Nick Adams";
+        String greeting = "Hola!";
+        System.out.printf("Hello %s, nice to meet you!%n", name);
+
+        System.out.printf("%s, %s %n", greeting, name);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Type something...");
+        String userInput = sc.nextLine();
+        System.out.println("You entered " + userInput);
 
 
 
