@@ -1,4 +1,5 @@
 package Java1;
+
 import java.util.Scanner;
 
 public class Main {
@@ -56,12 +57,36 @@ public class Main {
 
         System.out.printf("%s, %s %n", greeting, name);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Type something...");
-        String userInput = sc.nextLine();
-        System.out.println("You entered " + userInput);
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Type something...");
+//        String userInput = sc.nextLine();
+//        System.out.println("You entered " + userInput);
+
+//        int i = 5;
+//        while(i <= 15) {
+//            System.out.println(i);
+//            i++;
+//        }
+
+//        for(int i = 1; i < 100; i++) {
+//            if(i % 15 == 0) System.out.println("Fizz Buzz");
+//            else if(i % 3 == 0) System.out.println("Fizz");
+//            else if(i % 5 == 0) System.out.println("Buzz");
+//            else System.out.println(i);
+//        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number grade");
+        int response = Integer.parseInt(scanner.nextLine());
 
 
+        if (response <= 60) System.out.println("Your grade is an 'F'");
+        else if (response <= 70) System.out.println("Your grade is a 'D'");
+        else if (response <= 80) System.out.println("Your grade is a 'C'");
+        else if (response <= 90) System.out.println("Your grade is a 'B'");
+        else if (response <= 100) System.out.println("Your grade is an 'A'");
+        else System.out.println("please enter a valid grade number");
+        System.out.println("Can't parse input, please try again");
 
 
     }
