@@ -20,5 +20,14 @@ public class Main {
         System.out.println(Arithmetic.pi);
         System.out.println(Arithmetic.add(4, 5));
         System.out.println(Arithmetic.multiply(5, 2));
+
+        Person theBestDrummer = new Person();
+        theBestDrummer.firstName = "Thomas";
+        theBestDrummer.lastName = "Lang";
+        Person.worldPopulation += 1;
+        System.out.println(Person.worldPopulation);
+        System.out.println(theBestDrummer.sayHello());
+
+
     }
 }
