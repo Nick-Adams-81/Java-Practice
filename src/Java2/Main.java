@@ -28,6 +28,15 @@ public class Main {
         System.out.println(Person.worldPopulation);
         System.out.println(theBestDrummer.sayHello());
 
+        Student newStudent = new Student("Nickie barnes");
+        System.out.println(newStudent.getInfo());
+
+        Student anotherNewStudent = new Student("John Doe", "Quasar");
+        System.out.println(anotherNewStudent.getInfo());
+
+        Student janeDoe = new Student("Jane Doe", "Pulsar", 24);
+        System.out.println(janeDoe.getInfo());
+
 
     }
 }
