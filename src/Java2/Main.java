@@ -17,5 +17,8 @@ public class Main {
 
         //static field of a class
         System.out.println(Math.PI);
+        System.out.println(Arithmetic.pi);
+        System.out.println(Arithmetic.add(4, 5));
+        System.out.println(Arithmetic.multiply(5, 2));
     }
 }
