@@ -1,5 +1,7 @@
 package Java2;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -36,6 +38,21 @@ public class Main {
 
         Student janeDoe = new Student("Jane Doe", "Pulsar", 24);
         System.out.println(janeDoe.getInfo());
+
+        // arrays
+        int[] myArr = new int[2];
+        myArr[0] = 10;
+        myArr[1] = 20;
+
+        for(int i : myArr) {
+            System.out.println(i);
+        }
+
+        String[] theBeatles = {"John", "Paul", "George", "Ringo"};
+        System.out.println(Arrays.toString(theBeatles));
+
+        // 2d arrays
+
 
 
     }
