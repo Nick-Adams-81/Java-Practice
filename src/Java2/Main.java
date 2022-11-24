@@ -6,13 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         // instance fields of a class(objects)
-        Person nick = new Person();
-        Person mom = new Person();
-        nick.firstName = "Nick";
-        nick.lastName = "Adams";
+        Person nick = new Person("Nick", "Adams");
+        Person mom = new Person("Terry", "Lev");
 
-        mom.firstName = "Terry";
-        mom.lastName = "Lev";
+
+
 
         System.out.println(nick.sayHello());
         System.out.println(mom.sayHello());
@@ -23,9 +21,7 @@ public class Main {
         System.out.println(Arithmetic.add(4, 5));
         System.out.println(Arithmetic.multiply(5, 2));
 
-        Person theBestDrummer = new Person();
-        theBestDrummer.firstName = "Thomas";
-        theBestDrummer.lastName = "Lang";
+        Person theBestDrummer = new Person("Thomas", "Lang");
         Person.worldPopulation += 1;
         System.out.println(Person.worldPopulation);
         System.out.println(theBestDrummer.sayHello());
@@ -72,6 +68,11 @@ public class Main {
             System.out.println();
             System.out.println("+---+---+---+");
         }
+
+        Employee newEmployee = new Employee("Test", "Employee");
+        System.out.println(newEmployee.sayHello());
+        newEmployee.doWork();
+
 
 
 
