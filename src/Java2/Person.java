@@ -14,4 +14,8 @@ public class Person {
     public String sayHello() {
         return String.format("Hello from %s %s!", firstName, lastName);
     }
+
+    public String getName() {
+        return firstName + " " + lastName;
+    }
 }

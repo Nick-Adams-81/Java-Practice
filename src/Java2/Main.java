@@ -73,7 +73,9 @@ public class Main {
         System.out.println(newEmployee.sayHello());
         newEmployee.doWork();
 
-
+        SuperHero theManOfSteel = new SuperHero("Clark", "Kent", "Superman");
+        System.out.println(theManOfSteel.getName());
+        System.out.println(theManOfSteel.getSecretIdentity());
 
 
     }
