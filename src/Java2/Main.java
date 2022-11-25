@@ -1,5 +1,6 @@
 package Java2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -84,6 +85,19 @@ public class Main {
 
         System.out.println(john.getName() + ", " + john.getDepartment());
 
+        ArrayList<Integer> myNums = new ArrayList<>();
+        myNums.add(1);
+        myNums.add(2);
+        myNums.add(3);
+        myNums.add(14);
+
+        for(int num : myNums) {
+            System.out.println(num);
+        }
+
+        System.out.println(myNums.size());
+        System.out.println(myNums.contains(1));
+        System.out.println(myNums.lastIndexOf(3));
 
     }
 }
