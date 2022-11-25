@@ -77,6 +77,13 @@ public class Main {
         System.out.println(theManOfSteel.getName());
         System.out.println(theManOfSteel.getSecretIdentity());
 
+        Accountant tim = new Accountant("Tim", "Software");
+        System.out.println(tim.work());
+        Developer john = new Developer("John", "hardware");
+        System.out.println(john.work());
+
+        System.out.println(john.getName() + ", " + john.getDepartment());
+
 
     }
 }
