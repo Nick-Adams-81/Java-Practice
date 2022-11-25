@@ -2,6 +2,7 @@ package Java2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Main {
 
@@ -85,6 +86,7 @@ public class Main {
 
         System.out.println(john.getName() + ", " + john.getDepartment());
 
+        // Array List
         ArrayList<Integer> myNums = new ArrayList<>();
         myNums.add(1);
         myNums.add(2);
@@ -98,6 +100,17 @@ public class Main {
         System.out.println(myNums.size());
         System.out.println(myNums.contains(1));
         System.out.println(myNums.lastIndexOf(3));
+
+        // Hash map
+        HashMap<String, String> usernames = new HashMap<>();
+        usernames.put("A", "Nick");
+        usernames.put("B", "Chris");
+        usernames.put("C", "Ryan");
+        System.out.println(usernames);
+
+        System.out.println(usernames.get("A"));
+        System.out.println(usernames.containsKey("d"));
+        System.out.println(usernames.containsValue("Ryan"));
 
     }
 }
