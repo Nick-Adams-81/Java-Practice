@@ -106,6 +106,7 @@ public class Main {
         usernames.put("A", "Nick");
         usernames.put("B", "Chris");
         usernames.put("C", "Ryan");
+        usernames.put("D", "Walt");
         System.out.println(usernames);
 
         System.out.println(usernames.get("A"));
