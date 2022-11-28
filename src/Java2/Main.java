@@ -113,5 +113,29 @@ public class Main {
         System.out.println(usernames.containsKey("d"));
         System.out.println(usernames.containsValue("Ryan"));
 
+        int[] nums = {1, 2, 3};
+        int x;
+//        System.out.println(nums[9]);
+
+        try {
+            System.out.println("let's see...");
+            int result = 10 / 2;
+            System.out.println("Answer = " + result);
+        } catch(ArithmeticException e) {
+            System.out.println("Math still works!");
+        }
+
+        try {
+            x = nums[100];
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Caught an array index exception");
+        } catch(Exception e) {
+            System.out.println("Caught a generic exception");
+        } finally {
+            assert System.out != null;
+            System.out.println("This will always run");
+        }
+
+
     }
 }
