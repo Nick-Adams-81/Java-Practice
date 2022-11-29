@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -141,15 +142,36 @@ public class Main {
             System.out.println("This will always run");
         }
 
+        // file i/o
         List<String> groceryList = Arrays.asList("coffee", "tea", "sugar");
         Path filepath = Paths.get("groceries.txt");
         Files.write(filepath, groceryList);
 
         Path groceryPath = Paths.get("groceries.txt");
         List<String> groceriesList = Files.readAllLines(groceryPath);
-        for (String s : groceriesList) {
-            System.out.println(s);
+        for(int i = 0; i < groceriesList.size(); i++) {
+            System.out.println((i + 1) + ": " + groceriesList.get(i));
         }
+
+        Files.write(Paths.get("groceries.txt"), Arrays.asList("eggs"), StandardOpenOption.APPEND);
+        List<String> newList = Files.readAllLines(groceryPath);
+        for(int i = 0; i < newList.size(); i++) {
+            System.out.println(newList.get(i));
+        }
+
+        List<String> lines = Files.readAllLines(Paths.get("groceries.txt"));
+        List<String> list2 = new ArrayList<>();
+        for(String line : lines) {
+            if (line.equals("eggs")) {
+                list2.add("cream");
+                continue;
+            }
+            list2.add(line);
+        }
+
+        Files.write(Paths.get("groceries.txt"), list2);
+
+        System.out.println(list2);
 
 
     }
