@@ -1,12 +1,17 @@
 package Java2;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // instance fields of a class(objects)
         Person nick = new Person("Nick", "Adams");
         Person mom = new Person("Terry", "Lev");
@@ -134,6 +139,16 @@ public class Main {
         } finally {
             assert System.out != null;
             System.out.println("This will always run");
+        }
+
+        List<String> groceryList = Arrays.asList("coffee", "tea", "sugar");
+        Path filepath = Paths.get("groceries.txt");
+        Files.write(filepath, groceryList);
+
+        Path groceryPath = Paths.get("groceries.txt");
+        List<String> groceriesList = Files.readAllLines(groceryPath);
+        for (String s : groceriesList) {
+            System.out.println(s);
         }
 
 
