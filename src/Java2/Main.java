@@ -221,6 +221,15 @@ public class Main {
         System.out.println(someList.size());
         System.out.println(someList.indexOf("My name is Nick"));
 
+        HashMap<String, String> myHashMap = new HashMap<>();
+
+        myHashMap.put("name1:", "Nick");
+        myHashMap.put("name2:", "Trey");
+        myHashMap.put("name3:", "walt");
+
+        System.out.println(myHashMap);
+
+
 
 
     }
