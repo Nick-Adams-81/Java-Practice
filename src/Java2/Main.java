@@ -12,6 +12,28 @@ import java.util.List;
 
 public class Main {
 
+    public static int removeDuplicates(int[] arr, int n) {
+        if(n == 0 || n == 1) {
+            return n;
+        }
+        int[]temp = new int[n];
+        int j = 0;
+
+        for(int i = 0; i < n -1; i++) {
+            if(arr[i] != arr[ i + 1]) {
+                temp[j++] = arr[i];
+            }
+        }
+        temp[j++] = arr[n -1];
+
+        for(int i = 0; i < j; i++) {
+            arr[i] = temp[i];
+        }
+
+        return j;
+
+    }
+
     public static void main(String[] args) throws IOException {
         // instance fields of a class(objects)
         Person nick = new Person("Nick", "Adams");
@@ -172,6 +194,33 @@ public class Main {
         Files.write(Paths.get("groceries.txt"), list2);
 
         System.out.println(list2);
+
+
+
+        int[] testArr = {1, 2, 3, 3, 4, 5, 6, 7, 7, 8};
+        int n = testArr.length;
+
+        n = removeDuplicates(testArr, n);
+
+        for(int i = 0; i < n; i++) {
+            System.out.println(testArr[i]);
+        }
+
+
+
+        ArrayList<String> someList = new ArrayList<>();
+        someList.add("hello");
+        someList.add("My name is Nick");
+        someList.add("Whats your name?");
+
+        System.out.println(someList);
+        for(String a : someList) {
+            System.out.println(a);
+        }
+
+        System.out.println(someList.size());
+        System.out.println(someList.indexOf("My name is Nick"));
+
 
 
     }
